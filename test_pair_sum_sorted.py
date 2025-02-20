@@ -31,19 +31,19 @@ class TestPairSumSorted(unittest.TestCase):
         nums = [5, 5, 5, 5]
         target = 10
         result = pair_sum_sorted(nums, target)
-        self.assertEqual(result, [0, 1])
+        self.assertEqual(result, [0, 3])
 
     def test_negative_numbers(self):
         nums = [-3, -1, 1, 2, 4, 5]
         target = 1
         result = pair_sum_sorted(nums, target)
-        self.assertEqual(result, [1, 2])
+        self.assertEqual(result, [0, 4])
 
     def test_large_numbers(self):
         nums = [1000, 2000, 3000, 4000]
         target = 5000
         result = pair_sum_sorted(nums, target)
-        self.assertEqual(result, [1, 2])
+        self.assertIn(result, [[1, 2], [0, 3]])
 
 
 if __name__ == '__main__':
