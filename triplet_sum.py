@@ -33,6 +33,3 @@ def triplet_sum(nums: List[int]) -> List[List[int]]:
             else:
                 right -= 1
     return triplets
-
-
-print(triplet_sum([-3, -1, 1, 2, 4, 5]))
